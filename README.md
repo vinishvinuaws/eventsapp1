@@ -1,2 +1,2 @@
-# eventsapp1
-class demo
+# eventsappstart
+This is a simple events app
