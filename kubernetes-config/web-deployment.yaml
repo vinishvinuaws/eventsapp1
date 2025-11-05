@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: events-web
+  labels:
+    app: events-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: events-web
+      ver: v1.0
+  template:
+    metadata:
+      labels:
+        app: events-web
+        ver: v1.0
+    spec:
+      containers:
+        - name: events-web
+          image: vinishvinuaws/events-website:v1.0
+          ports:
+            - containerPort: 8080
